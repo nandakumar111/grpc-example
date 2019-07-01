@@ -64,5 +64,7 @@ static_resources:
       hosts: [{ socket_address: { address: host.docker.internal, port_value: 8080 }}]
 ```
 **Command to run Envoy Proxy server in docker**
->`$ docker build -t fogfind/grpc-web-server-envoy-proxy`
->`$ docker run -d -p 9090:9090 fogfind/grpc-web-server-envoy-proxy`
+```
+docker build -t fogfind/grpc-web-server-envoy-proxy
+docker run -d -p 9090:9090 fogfind/grpc-web-server-envoy-proxy
+```
