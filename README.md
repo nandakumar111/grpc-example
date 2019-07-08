@@ -391,6 +391,6 @@ static_resources:
 ```
 **Command to run Envoy Proxy server in docker**
 ```
-docker build -t nandakumar111/grpc-web-server-envoy-proxy
+docker build -t nandakumar111/grpc-web-server-envoy-proxy .
 docker run -d -p 9090:9090 nandakumar111/grpc-web-server-envoy-proxy
 ```
