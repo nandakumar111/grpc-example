@@ -370,7 +370,7 @@ static_resources:
                       routes:
                         - match: { prefix: "/" }
                           route:
-                            cluster: ping_pong_service
+                            cluster: auth_service
                             max_grpc_timeout: 0s
                       cors:
                         allow_origin:
@@ -382,7 +382,7 @@ static_resources:
                   - name: envoy.cors
                   - name: envoy.router
   clusters:
-    - name: fogfind_service
+    - name: auth_service
       connect_timeout: 0.25s
       type: logical_dns
       http2_protocol_options: {}
@@ -391,6 +391,6 @@ static_resources:
 ```
 **Command to run Envoy Proxy server in docker**
 ```
-docker build -t fogfind/grpc-web-server-envoy-proxy
-docker run -d -p 9090:9090 fogfind/grpc-web-server-envoy-proxy
+docker build -t nandakumar111/grpc-web-server-envoy-proxy
+docker run -d -p 9090:9090 nandakumar111/grpc-web-server-envoy-proxy
 ```
